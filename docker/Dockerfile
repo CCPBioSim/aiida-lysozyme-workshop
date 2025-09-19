@@ -27,7 +27,6 @@ USER $NB_USER
 WORKDIR $HOME
 
 # Dependencies for the workshop
-RUN conda install mamba
 RUN mamba install -c conda-forge -y aiida-core
 RUN if [ "$TARGETPLATFORM" = "linux/amd64" ]; then \
       conda install conda-forge/linux-64::gromacs=2024.5=nompi_h5f56185_100 -y; \
