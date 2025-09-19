@@ -1,7 +1,7 @@
 PSDI AiiDA Lysozyme Workshop
 ============================
 
-[![build](https://github.com/jimboid/biosim-aiida-lysozyme-workshop/actions/workflows/build.yaml/badge.svg?branch=main)](https://github.com/jimboid/biosim-aiida-lysozyme-workshop/actions/workflows/build.yaml)
+[![build](https://github.com/ccpbiosim/aiida-lysozyme-workshop/actions/workflows/build.yaml/badge.svg?branch=main)](https://github.com/ccpbiosim/aiida-lysozyme-workshop/actions/workflows/build.yaml)
 
 This container is derived from the CCPBioSim JupyterHub image. This container
 adds the necessary software packages and notebook content to form a deployable
