@@ -3,10 +3,6 @@ ARG BASE_IMAGE=latest
 FROM ghcr.io/ccpbiosim/jupyterhub-base:$BASE_IMAGE
 
 LABEL maintainer="James Gebbie-Rayet <james.gebbie@stfc.ac.uk>"
-LABEL org.opencontainers.image.source=https://github.com/ccpbiosim/aiida-lysozyme-workshop
-LABEL org.opencontainers.image.description="A container environment for the PSDI workshop on AiiDA tools for data collection."
-LABEL org.opencontainers.image.licenses=MIT
-
 ARG TARGETPLATFORM
 
 USER root
@@ -44,9 +40,6 @@ RUN echo "./aiida-start" >> ~/.bashrc
 COPY --chown=1000:100 docker/default-37a8.jupyterlab-workspace /home/jovyan/.jupyter/lab/workspaces/default-37a8.jupyterlab-workspace
 COPY --chown=1000:100 aiida-start /home/jovyan/
 COPY --chown=1000:100 aiida-stop /home/jovyan/
-
-# UNCOMMENT THIS LINE FOR REMOTE DEPLOYMENT
-COPY docker/jupyter_notebook_config.py /etc/jupyter/
 
 # Always finish with non-root user as a precaution.
 USER $NB_USER
