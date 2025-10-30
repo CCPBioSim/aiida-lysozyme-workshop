@@ -47,6 +47,7 @@ jobs:
         if: github.event_name == 'pull_request'
         uses: docker/build-push-action@v6.18.0
         with:
+          file: ./docker/Dockerfile
           platforms: ${{ matrix.platform }}
           labels: ${{ steps.meta.outputs.labels }}
           tags: ghcr.io/${{ vars.ORG_REPO }}/${{ github.event.repository.name }}
@@ -74,6 +75,7 @@ jobs:
         id: build
         uses: docker/build-push-action@v6.18.0
         with:
+          file: ./docker/Dockerfile
           platforms: ${{ matrix.platform }}
           labels: ${{ steps.meta.outputs.labels }}
           tags: ghcr.io/${{ vars.ORG_REPO }}/${{ github.event.repository.name }}
