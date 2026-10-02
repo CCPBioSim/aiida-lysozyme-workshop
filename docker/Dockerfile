@@ -19,7 +19,6 @@ RUN git clone https://github.com/PSDI-UK/aiida-gromacs.git && \
     mv aiida-gromacs/notebooks/lysozyme_tutorial.ipynb . && \
     rm -rf aiida-gromacs
 
-RUN echo "./aiida-start" >> ~/.bashrc
 COPY --chown=1000:100 docker/default-37a8.jupyterlab-workspace /home/jovyan/.jupyter/lab/workspaces/default-37a8.jupyterlab-workspace
 
 # Always finish with non-root user as a precaution.
