@@ -10,7 +10,7 @@ WORKDIR $HOME
 
 # Dependencies for the workshop
 RUN conda install -y -c conda-forge -c ccpbiosim \
-    conda-forge::aiida-core=2.9.2 \
+    conda-forge::aiida-core=2.9.3 \
     ccpbiosim::aiida-gromacs=2.3.1 \
     conda-forge::gromacs=2026.3=nompi_*
 
