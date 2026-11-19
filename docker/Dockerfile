@@ -14,7 +14,7 @@ RUN conda install -y -c conda-forge -c ccpbiosim \
     ccpbiosim::aiida-gromacs=2.3.1 \
     conda-forge::gromacs=2026.3=nompi_*
 
-RUN git clone https://github.com/PSDI-UK/aiida-gromacs.git && \
+RUN git clone https://github.com/CCPBioSim/aiida-gromacs.git && \
     mv aiida-gromacs/examples/lysozyme_files . && \
     mv aiida-gromacs/notebooks/lysozyme_tutorial.ipynb . && \
     rm -rf aiida-gromacs
