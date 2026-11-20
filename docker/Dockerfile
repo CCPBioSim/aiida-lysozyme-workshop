@@ -11,7 +11,7 @@ WORKDIR $HOME
 # Dependencies for the workshop
 RUN conda install -y -c conda-forge -c ccpbiosim \
     conda-forge::aiida-core=2.9.4 \
-    ccpbiosim::aiida-gromacs=2.3.1 \
+    ccpbiosim::aiida-gromacs=2.3.2 \
     conda-forge::gromacs=2026.3=nompi_*
 
 RUN git clone https://github.com/CCPBioSim/aiida-gromacs.git && \
